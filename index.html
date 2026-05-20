@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ปฏิทิน พ.ศ. 2569 (2026) | ปฏิทินไทยโมเดิร์น</title>
+  <meta name="description"
+    content="ปฏิทินไทยโมเดิร์น ประจำปี พ.ศ. 2569 (ค.ศ. 2026) แสดงวันหยุดราชการ วันสำคัญ เทศกาล พร้อมระบบบันทึกกิจกรรมอัจฉริยะใช้งานง่ายและรองรับหลากหลายธีม">
+
+  <!-- Google Fonts: Kanit for Thai text, Inter for numbers -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* DESIGN SYSTEM & THEMES */
+    :root {
+      /* Theme: Deep Space (Default) */
+      --bg-gradient: linear-gradient(135deg, #090d16 0%, #111827 50%, #030712 100%);
+      --panel-bg: rgba(17, 24, 39, 0.7);
+      --panel-border: rgba(255, 255, 255, 0.08);
+      --card-bg: rgba(30, 41, 59, 0.45);
+      --card-border: rgba(255, 255, 255, 0.05);
+
+      --text-primary: #f3f4f6;
+      --text-secondary: #9ca3af;
+      --text-muted: #6b7280;
+
+      --accent: #8b5cf6;
+      --accent-glow: rgba(139, 92, 246, 0.4);
+      --accent-hover: #a78bfa;
+
+      --holiday-color: #ef4444;
+      --holiday-bg: rgba(239, 68, 68, 0.15);
+      --festival-color: #f59e0b;
+      --festival-bg: rgba(245, 158, 11, 0.15);
+
+      --today-bg: rgba(59, 130, 246, 0.15);
+      --today-border: #3b82f6;
+      --today-text: #60a5fa;
+
+      --card-hover: rgba(255, 255, 255, 0.03);
+      --shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+      --font-thai: 'Kanit', sans-serif;
+      --font-num: 'Inter', sans-serif;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    body.theme-gold {
+      --bg-gradient: linear-gradient(135deg, #0c0b0a 0%, #1a1714 50%, #060504 100%);
+      --panel-bg: rgba(28, 25, 23, 0.75);
+      --panel-border: rgba(212, 175, 55, 0.2);
+      --card-bg: rgba(41, 37, 36, 0.45);
+      --card-border: rgba(212, 175, 55, 0.08);
+
+      --text-primary: #f5f5f4;
+      --text-secondary: #a8a29e;
+      --text-muted: #78716c;
+
+      --accent: #d4af37;
+      --accent-glow: rgba(212, 175, 55, 0.3);
+      --accent-hover: #f3e5ab;
+
+      --holiday-color: #f43f5e;
+      --holiday-bg: rgba(244, 63, 94, 0.15);
+      --festival-color: #eab308;
+      --festival-bg: rgba(234, 179, 8, 0.15);
+
+      --today-bg: rgba(212, 175, 55, 0.12);
+      --today-border: #d4af37;
+      --today-text: #f3e5ab;
+
+      --card-hover: rgba(212, 175, 55, 0.03);
+      --shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6);
+    }
+
+    body.theme-light {
+      --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%);
+      --panel-bg: rgba(255, 255, 255, 0.8);
+      --panel-border: rgba(148, 163, 184, 0.25);
+      --card-bg: rgba(255, 255, 255, 0.65);
+      --card-border: rgba(148, 163, 184, 0.15);
+
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+
+      --accent: #6366f1;
+      --accent-glow: rgba(99, 102, 241, 0.25);
+      --accent-hover: #4f46e5;
+
+      --holiday-color: #dc2626;
+      --holiday-bg: rgba(220, 38, 38, 0.1);
+      --festival-color: #d97706;
+      --festival-bg: rgba(217, 119, 6, 0.1);
+
+      --today-bg: rgba(99, 102, 241, 0.08);
+      --today-border: #6366f1;
+      --today-text: #4f46e5;
+
+      --card-hover: rgba(0, 0, 0, 0.02);
+      --shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.05);
+    }
+
+    /* GENERAL STYLES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-thai);
+      background: var(--bg-gradient);
+      color: var(--text-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      transition: background var(--transition);
+    }
+
+    a,
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(139, 92, 246, 0.3);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent);
+    }
+
+    /* DECORATIVE BACKGROUND GLOWS */
+    .glow-circle {
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: var(--accent-glow);
+      filter: blur(120px);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    .glow-1 {
+      top: -100px;
+      left: -100px;
+    }
+
+    .glow-2 {
+      bottom: -100px;
+      right: -100px;
+    }
+
+    /* LAYOUT CONTAINER */
+    .app-container {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      min-height: 100vh;
+      max-width: 1800px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+    }
+
+    /* SIDEBAR PANEL */
+    .sidebar {
+      background: var(--panel-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-right: 1px solid var(--panel-border);
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-height: 100vh;
+      position: sticky;
+      top: 0;
+      overflow-y: auto;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-logo {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px var(--accent-glow);
+      color: white;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .brand-info h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      background: linear-gradient(90deg, var(--text-primary) 0%, var(--accent) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-info p {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+
+    /* CONTROLS & FILTER SECTION */
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .control-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* INPUTS & SELECTS */
+    .input-field,
+    .select-field {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--panel-border);
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .theme-light .input-field,
+    .theme-light .select-field {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .input-field:focus,
+    .select-field:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    /* THEME SELECTOR GRID */
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+    }
+
+    .theme-btn {
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--panel-border);
+      background: rgba(0, 0, 0, 0.15);
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      cursor: pointer;
+      font-weight: 500;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .theme-btn:hover {
+      color: var(--text-primary);
+      border-color: var(--accent);
+    }
+
+    .theme-btn.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      box-shadow: 0 4px 10px var(--accent-glow);
+    }
+
+    /* STATS CARD */
+    .stats-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--panel-border);
+      border-radius: 12px;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .stat-value {
+      font-family: var(--font-num);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .stat-title {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    /* HOLIDAY LIST */
+    .holiday-list-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      flex-grow: 1;
+      overflow-y: auto;
+    }
+
+    .holiday-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .holiday-item {
+      padding: 0.65rem 0.8rem;
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 3px solid var(--holiday-color);
+      border-radius: 0 8px 8px 0;
+      font-size: 0.85rem;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .holiday-item.festival {
+      border-left-color: var(--festival-color);
+    }
+
+    .holiday-item:hover {
+      background: var(--card-hover);
+      transform: translateX(3px);
+    }
+
+    .holiday-date {
+      font-family: var(--font-num);
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.15rem;
+    }
+
+    .holiday-name {
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* MAIN CONTENT AREA */
+    .main-content {
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      overflow-y: auto;
+    }
+
+    /* MAIN HEADER */
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .calendar-title-area {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .calendar-year-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .calendar-year-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+
+    .year-controls {
+      display: flex;
+      align-items: center;
+      background: var(--panel-bg);
+      border: 1px solid var(--panel-border);
+      border-radius: 12px;
+      padding: 0.35rem;
+      gap: 0.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .year-nav-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-primary);
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .year-nav-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--accent);
+    }
+
+    .current-year-display {
+      font-family: var(--font-num);
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 0 1rem;
+      color: var(--accent);
+    }
+
+    /* 12 MONTH GRID */
+    .months-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    /* MONTH CARD */
+    .month-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .month-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(139, 92, 246, 0.25);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .theme-gold .month-card:hover {
+      border-color: rgba(212, 175, 55, 0.3);
+    }
+
+    .theme-light .month-card:hover {
+      border-color: rgba(99, 102, 241, 0.2);
+      box-shadow: 0 20px 40px rgba(31, 38, 135, 0.08);
+    }
+
+    .month-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--panel-border);
+      padding-bottom: 0.75rem;
+    }
+
+    .month-name-thai {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .month-name-eng {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+      text-transform: uppercase;
+      font-family: var(--font-num);
+    }
+
+    /* MONTH DAYS GRID */
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.4rem;
+      text-align: center;
+    }
+
+    /* WEEKDAY HEADER */
+    .weekday-header {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding-bottom: 0.25rem;
+    }
+
+    .weekday-header.sat,
+    .weekday-header.sun {
+      color: var(--holiday-color);
+      opacity: 0.8;
+    }
+
+    /* INDIVIDUAL DAY CELL */
+    .day-cell {
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-family: var(--font-num);
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--text-primary);
+      transition: var(--transition);
+      border: 1px solid transparent;
+      user-select: none;
+    }
+
+    .day-cell:hover:not(.empty) {
+      background: var(--accent);
+      color: white;
+      transform: scale(1.1);
+      z-index: 2;
+      box-shadow: 0 4px 12px var(--accent-glow);
+    }
+
+    .day-cell.empty {
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* DAY CATEGORIES */
+    .day-cell.sat,
+    .day-cell.sun {
+      color: var(--holiday-color);
+    }
+
+    .day-cell.holiday {
+      color: var(--holiday-color);
+      font-weight: 700;
+      background: var(--holiday-bg);
+      border-radius: 10px;
+    }
+
+    .day-cell.festival {
+      color: var(--festival-color);
+      font-weight: 600;
+      background: var(--festival-bg);
+      border-radius: 10px;
+    }
+
+    .day-cell.today {
+      background: var(--today-bg);
+      border: 1.5px solid var(--today-border);
+      color: var(--today-text);
+      font-weight: 700;
+      box-shadow: inset 0 0 6px var(--today-border);
+    }
+
+    /* EVENT INDICATORS */
+    .event-dots {
+      display: flex;
+      gap: 2px;
+      position: absolute;
+      bottom: 4px;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .event-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+    }
+
+    .dot-work {
+      background-color: #8b5cf6;
+    }
+
+    .dot-personal {
+      background-color: #3b82f6;
+    }
+
+    .dot-urgent {
+      background-color: #ef4444;
+    }
+
+    .dot-health {
+      background-color: #10b981;
+    }
+
+    /* DETAIL DRAWER / SIDE PANEL */
+    .drawer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      z-index: 99;
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition);
+    }
+
+    .drawer-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: -450px;
+      width: 450px;
+      max-width: 100%;
+      height: 100vh;
+      background: var(--panel-bg);
+      border-left: 1px solid var(--panel-border);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
+      z-index: 100;
+      transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .drawer.open {
+      right: 0;
+    }
+
+    .drawer-header {
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--panel-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .drawer-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .drawer-close {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 1.5rem;
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: var(--transition);
+    }
+
+    .drawer-close:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-primary);
+    }
+
+    .drawer-content {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      overflow-y: auto;
+      flex-grow: 1;
+    }
+
+    /* DATE CARD */
+    .date-badge-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--panel-border);
+      border-radius: 16px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .date-day-num {
+      font-family: var(--font-num);
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--accent);
+    }
+
+    .date-full-thai {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .date-full-eng {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-family: var(--font-num);
+    }
+
+    /* HOLIDAY TAG */
+    .holiday-tag-large {
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .holiday-tag-large.public {
+      background: var(--holiday-bg);
+      color: var(--holiday-color);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+    }
+
+    .holiday-tag-large.festival {
+      background: var(--festival-bg);
+      color: var(--festival-color);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+    }
+
+    /* EVENT BUILDER FORM */
+    .event-section-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .event-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid var(--panel-border);
+      padding: 1rem;
+      border-radius: 14px;
+    }
+
+    .event-form input,
+    .event-form select,
+    .event-form textarea {
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--panel-border);
+      color: var(--text-primary);
+      padding: 0.6rem 0.8rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .theme-light .event-form input,
+    .theme-light .event-form select,
+    .theme-light .event-form textarea {
+      background: white;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .event-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+
+    .color-picker-wrapper {
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+      padding: 0.25rem 0;
+    }
+
+    .color-opt {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: var(--transition);
+    }
+
+    .color-opt.active {
+      border-color: white;
+      transform: scale(1.15);
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    }
+
+    .theme-light .color-opt.active {
+      border-color: #333;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .color-work {
+      background-color: #8b5cf6;
+    }
+
+    .color-personal {
+      background-color: #3b82f6;
+    }
+
+    .color-urgent {
+      background-color: #ef4444;
+    }
+
+    .color-health {
+      background-color: #10b981;
+    }
+
+    .submit-event-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      margin-top: 0.25rem;
+    }
+
+    .submit-event-btn:hover {
+      background: var(--accent-hover);
+      box-shadow: 0 4px 12px var(--accent-glow);
+    }
+
+    /* NOTES LIST */
+    .notes-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .note-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--panel-border);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      padding: 0.75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .note-content-area {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .note-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .note-meta {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .note-tag {
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: white;
+    }
+
+    .delete-note-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 0.25rem;
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+
+    .delete-note-btn:hover {
+      color: var(--holiday-color);
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    /* FOOTER */
+    .footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--panel-border);
+      background: var(--panel-bg);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 1024px) {
+      .app-container {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        height: auto;
+        max-height: none;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid var(--panel-border);
+      }
+
+      .main-content {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .calendar-year-title {
+        font-size: 1.8rem;
+      }
+
+      .months-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .drawer {
+        width: 100%;
+        right: -100%;
+      }
+    }
+  </style>
+</head>
+
+<body class="theme-dark">
+  <!-- Glowing backgrounds -->
+  <div class="glow-circle glow-1"></div>
+  <div class="glow-circle glow-2"></div>
+
+  <div class="app-container">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">๒๕</div>
+        <div class="brand-info">
+          <h1 id="brand-year-thai">ปฏิทิน พ.ศ. ๒๕๖๙</h1>
+          <p>พุทธศักราช 2569 / คริสต์ศักราช 2026</p>
+        </div>
+      </div>
+
+      <!-- Quick Navigation & Control -->
+      <div class="control-group">
+        <span class="control-label">ค้นหากิจกรรม & วันหยุด</span>
+        <input type="text" id="search-input" class="input-field" placeholder="ค้นหา... (เช่น วันสงกรานต์)">
+      </div>
+
+      <div class="control-group">
+        <span class="control-label">แสดงผลศักราช</span>
+        <select id="era-select" class="select-field">
+          <option value="BE" selected>พุทธศักราช (พ.ศ.)</option>
+          <option value="CE">คริสต์ศักราช (ค.ศ.)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <span class="control-label">ธีมสี</span>
+        <div class="theme-grid">
+          <button class="theme-btn active" data-theme="dark">อวกาศ</button>
+          <button class="theme-btn" data-theme="gold">ทองคำ</button>
+          <button class="theme-btn" data-theme="light">สว่าง</button>
+        </div>
+      </div>
+
+      <!-- Stats Card -->
+      <div class="stats-card">
+        <div class="stat-item">
+          <span class="stat-value" id="stat-holidays">19</span>
+          <span class="stat-title">วันหยุดนักขัตฤกษ์</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value" id="stat-events">0</span>
+          <span class="stat-title">กิจกรรมที่บันทึก</span>
+        </div>
+      </div>
+
+      <!-- List of holidays for quick reference -->
+      <div class="holiday-list-container">
+        <span class="control-label">วันสำคัญ & วันหยุดในขวบปี</span>
+        <div class="holiday-list" id="sidebar-holidays">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CALENDAR -->
+    <main class="main-content">
+      <header class="calendar-header">
+        <div class="calendar-title-area">
+          <h2 class="calendar-year-title" id="calendar-title">ปีมะเมีย พ.ศ. 2569</h2>
+          <span class="calendar-year-subtitle" id="calendar-subtitle">YEAR OF THE HORSE 2026</span>
+        </div>
+
+        <div class="year-controls">
+          <button class="year-nav-btn" id="prev-year-btn" title="ปีก่อนหน้า">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
+          <span class="current-year-display" id="year-display">2569</span>
+          <button class="year-nav-btn" id="next-year-btn" title="ปีถัดไป">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- 12 Months Grid -->
+      <div class="months-grid" id="months-container">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+    </main>
+  </div>
+
+  <!-- SLIDING DRAWER FOR DAY DETAILS -->
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <div class="drawer" id="drawer">
+    <div class="drawer-header">
+      <div class="drawer-title" id="drawer-title-date">รายละเอียดวันที่</div>
+      <button class="drawer-close" id="drawer-close-btn">&times;</button>
+    </div>
+    <div class="drawer-content">
+      <!-- Date Display Card -->
+      <div class="date-badge-card">
+        <div class="date-day-num" id="card-date-num">1</div>
+        <div class="date-full-thai" id="card-date-thai">วันพฤหัสบดีที่ 1 มกราคม พ.ศ. 2569</div>
+        <div class="date-full-eng" id="card-date-eng">Thursday, January 1, 2026</div>
+      </div>
+
+      <!-- Holiday Information Area -->
+      <div id="drawer-holiday-info">
+        <!-- Dynamically renders if today has a holiday -->
+      </div>
+
+      <!-- User Event List -->
+      <div>
+        <div class="event-section-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);">
+            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+            <line x1="16" x2="16" y1="2" y2="6" />
+            <line x1="8" x2="8" y1="2" y2="6" />
+            <line x1="3" x2="21" y1="10" y2="10" />
+            <path d="m9 16 2 2 4-4" />
+          </svg>
+          กิจกรรม / บันทึกย่อ
+        </div>
+        <div class="notes-list" id="drawer-notes-list">
+          <!-- List of events for the day -->
+        </div>
+      </div>
+
+      <!-- Add Event Form -->
+      <div>
+        <div class="event-section-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent);">
+            <path d="M5 12h14" />
+            <path d="M12 5v14" />
+          </svg>
+          เพิ่มรายการบันทึกใหม่
+        </div>
+        <form class="event-form" id="event-form">
+          <input type="text" id="event-title-input" placeholder="เรื่องที่บันทึก..." required>
+          <div class="event-form-row">
+            <input type="time" id="event-time-input">
+            <select id="event-type-select">
+              <option value="work">งาน (Work)</option>
+              <option value="personal">ส่วนตัว (Personal)</option>
+              <option value="urgent">เร่งด่วน (Urgent)</option>
+              <option value="health">สุขภาพ (Health)</option>
+            </select>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.25rem;">
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">รหัสสี:</span>
+            <div class="color-picker-wrapper">
+              <div class="color-opt color-work active" data-color="work" title="งาน"></div>
+              <div class="color-opt color-personal" data-color="personal" title="ส่วนตัว"></div>
+              <div class="color-opt color-urgent" data-color="urgent" title="เร่งด่วน"></div>
+              <div class="color-opt color-health" data-color="health" title="สุขภาพ"></div>
+            </div>
+          </div>
+          <button type="submit" class="submit-event-btn">บันทึกลงปฏิทิน</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; พ.ศ. 2569 ปฏิทินดิจิทัลอัจฉริยะ (Modern Thai Calendar 2026) |
+      ออกแบบด้วยความประณีตสำหรับเบราว์เซอร์สมัยใหม่</p>
+  </footer>
+
+  <script>
+    // DATA DECLARATION
+    const monthsThai = [
+      "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน",
+      "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"
+    ];
+    const monthsEng = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+    const daysThaiShort = ["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส"];
+    const daysThaiLong = ["วันอาทิตย์", "วันจันทร์", "วันอังคาร", "วันพุธ", "วันพฤหัสบดี", "วันศุกร์", "วันเสาร์"];
+    const daysEngLong = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    // Thai Zodiac animals based on lunar calendars
+    const zodiacs = {
+      2025: { animal: "ปีมะเส็ง (Snake)", desc: "งูเล็ก" },
+      2026: { animal: "ปีมะเมีย (Horse)", desc: "ม้า" },
+      2027: { animal: "ปีมะแม (Goat)", desc: "แพะ" }
+    };
+
+    // Public Holidays and Festivals Data (focusing on Year 2026, key dates mapped dynamically)
+    const holidayData = {
+      // New Year
+      "01-01": { title: "วันขึ้นปีใหม่", type: "public" },
+      "01-10": { title: "วันเด็กแห่งชาติ", type: "festival" }, // Second Sat of Jan 2026
+      "01-16": { title: "วันครู", type: "festival" },
+
+      // Valentine
+      "02-14": { title: "วันวาเลนไทน์", type: "festival" },
+
+      // Makha Bucha (Approximate lunar date in 2026: March 3)
+      "03-03": { title: "วันมาฆบูชา", type: "public" },
+
+      // Chakri Day
+      "04-06": { title: "วันจักรี", type: "public" },
+
+      // Songkran Festival
+      "04-13": { title: "วันสงกรานต์", type: "public" },
+      "04-14": { title: "วันสงกรานต์", type: "public" },
+      "04-15": { title: "วันสงกรานต์", type: "public" },
+
+      // Labor Day & Coronation Day
+      "05-01": { title: "วันแรงงานแห่งชาติ", type: "public" },
+      "05-04": { title: "วันฉัตรมงคล", type: "public" },
+      // Visakha Bucha (Approximate lunar date in 2026: May 30)
+      "05-30": { title: "วันวิสาขบูชา", type: "public" },
+
+      // Queen Suthida's Birthday
+      "06-03": { title: "วันเฉลิมฯ สมเด็จพระนางเจ้าฯ พระบรมราชินี", type: "public" },
+
+      // King Vajiralongkorn's Birthday & Buddhist Lent Days
+      "07-28": { title: "วันเฉลิมฯ พระบาทสมเด็จพระวชิรเกล้าเจ้าอยู่หัว (ร.10)", type: "public" },
+      "07-29": { title: "วันอาสาฬหบูชา", type: "public" },
+      "07-30": { title: "วันเข้าพรรษา", type: "public" },
+
+      // Mother's Day
+      "08-12": { title: "วันแม่แห่งชาติ / วันเฉลิมฯ สมเด็จพระบรมราชชนนีพันปีหลวง", type: "public" },
+
+      // King Bhumibol Memorial
+      "10-13": { title: "วันนวมินทรมหาราช (วันคล้ายวันสวรรคต ร.9)", type: "public" },
+      // Chulalongkorn Day
+      "10-23": { title: "วันปิยมหาราช", type: "public" },
+
+      // Loy Krathong (2026: November 24)
+      "11-24": { title: "วันลอยกระทง", type: "festival" },
+
+      // Father's Day
+      "12-05": { title: "วันพ่อแห่งชาติ (วันคล้ายวันพระบรมราชสมภพ ร.9)", type: "public" },
+      // Constitution Day
+      "12-10": { title: "วันรัฐธรรมนูญ", type: "public" },
+      // Christmas
+      "12-24": { title: "วันคริสต์มาสอีฟ", type: "festival" },
+      "12-25": { title: "วันคริสต์มาส", type: "festival" },
+      // New Year's Eve
+      "12-31": { title: "วันสิ้นปี", type: "public" }
+    };
+
+    // STATE VARIABLES
+    let currentYearCE = 2026;
+    let selectedEra = "BE"; // BE = Buddhist Era (+543), CE = Christian Era
+    let selectedDateStr = ""; // YYYY-MM-DD
+    let selectedColorTag = "work";
+    let events = JSON.parse(localStorage.getItem("thai_calendar_events")) || {};
+
+    // DOM ELEMENTS
+    const monthsContainer = document.getElementById("months-container");
+    const yearDisplay = document.getElementById("year-display");
+    const calendarTitle = document.getElementById("calendar-title");
+    const calendarSubtitle = document.getElementById("calendar-subtitle");
+    const brandYearThai = document.getElementById("brand-year-thai");
+    const prevYearBtn = document.getElementById("prev-year-btn");
+    const nextYearBtn = document.getElementById("next-year-btn");
+    const eraSelect = document.getElementById("era-select");
+    const searchInput = document.getElementById("search-input");
+    const statHolidays = document.getElementById("stat-holidays");
+    const statEvents = document.getElementById("stat-events");
+    const sidebarHolidays = document.getElementById("sidebar-holidays");
+
+    // Drawer Elements
+    const drawer = document.getElementById("drawer");
+    const drawerOverlay = document.getElementById("drawer-overlay");
+    const drawerCloseBtn = document.getElementById("drawer-close-btn");
+    const cardDateNum = document.getElementById("card-date-num");
+    const cardDateThai = document.getElementById("card-date-thai");
+    const cardDateEng = document.getElementById("card-date-eng");
+    const drawerHolidayInfo = document.getElementById("drawer-holiday-info");
+    const drawerNotesList = document.getElementById("drawer-notes-list");
+    const eventForm = document.getElementById("event-form");
+    const eventTitleInput = document.getElementById("event-title-input");
+    const eventTimeInput = document.getElementById("event-time-input");
+    const eventTypeSelect = document.getElementById("event-type-select");
+    const colorOpts = document.querySelectorAll(".color-opt");
+
+    // INIT FUNCTION
+    function init() {
+      setupEventListeners();
+      renderCalendar();
+      updateSidebarHolidays();
+      updateStats();
+    }
+
+    // EVENT LISTENERS
+    function setupEventListeners() {
+      // Year navigation
+      prevYearBtn.addEventListener("click", () => {
+        currentYearCE--;
+        renderCalendar();
+        updateSidebarHolidays();
+      });
+
+      nextYearBtn.addEventListener("click", () => {
+        currentYearCE++;
+        renderCalendar();
+        updateSidebarHolidays();
+      });
+
+      // Era Selection
+      eraSelect.addEventListener("change", (e) => {
+        selectedEra = e.target.value;
+        updateYearDisplays();
+        renderCalendar();
+      });
+
+      // Theme toggle
+      const themeBtns = document.querySelectorAll(".theme-btn");
+      themeBtns.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          themeBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          document.body.className = `theme-${btn.dataset.theme}`;
+        });
+      });
+
+      // Search field
+      searchInput.addEventListener("input", (e) => {
+        filterCalendarAndSidebar(e.target.value.trim());
+      });
+
+      // Drawer closing
+      drawerCloseBtn.addEventListener("click", closeDrawer);
+      drawerOverlay.addEventListener("click", closeDrawer);
+
+      // Color picker inside form
+      colorOpts.forEach(opt => {
+        opt.addEventListener("click", () => {
+          colorOpts.forEach(o => o.classList.remove("active"));
+          opt.classList.add("active");
+          selectedColorTag = opt.dataset.color;
+          eventTypeSelect.value = selectedColorTag;
+        });
+      });
+
+      eventTypeSelect.addEventListener("change", (e) => {
+        selectedColorTag = e.target.value;
+        colorOpts.forEach(o => {
+          o.classList.remove("active");
+          if (o.dataset.color === selectedColorTag) {
+            o.classList.add("active");
+          }
+        });
+      });
+
+      // Event form submit
+      eventForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        saveEvent();
+      });
+    }
+
+    // RENDER CALENDAR CORE
+    function renderCalendar() {
+      monthsContainer.innerHTML = "";
+      updateYearDisplays();
+
+      // Create all 12 months
+      for (let m = 0; m < 12; m++) {
+        const monthCard = createMonthCard(currentYearCE, m);
+        monthsContainer.appendChild(monthCard);
+      }
+
+      // Update event highlight markers in newly rendered calendar
+      updateEventMarkers();
+    }
+
+    // UPDATE DISPLAY LABELS
+    function updateYearDisplays() {
+      const yearBE = currentYearCE + 543;
+      const displayYear = selectedEra === "BE" ? yearBE : currentYearCE;
+      yearDisplay.textContent = displayYear;
+
+      // Zodiac text helper
+      const zodiac = zodiacs[currentYearCE] || { animal: "ปีนักษัตร", desc: "" };
+      calendarTitle.textContent = `${zodiac.animal} พ.ศ. ${yearBE}`;
+      calendarSubtitle.textContent = `YEAR OF THE ${zodiac.desc ? zodiac.desc.toUpperCase() : 'YEAR'} | CE ${currentYearCE}`;
+
+      brandYearThai.textContent = `ปฏิทิน พ.ศ. ${convertNumberToThai(yearBE)}`;
+    }
+
+    // CONVERT ARABIC NUMBER TO THAI NUMERALS
+    function convertNumberToThai(num) {
+      const thaiNums = ["๐", "๑", "๒", "๓", "๔", "๕", "๖", "๗", "๘", "๙"];
+      return num.toString().split("").map(d => thaiNums[parseInt(d)] || d).join("");
+    }
+
+    // CREATE MONTH CARD ELEMENT
+    function createMonthCard(year, monthIndex) {
+      const card = document.createElement("div");
+      card.className = "month-card";
+      card.id = `month-card-${monthIndex}`;
+
+      const header = document.createElement("div");
+      header.className = "month-header";
+
+      const thaiTitle = document.createElement("span");
+      thaiTitle.className = "month-name-thai";
+      thaiTitle.textContent = monthsThai[monthIndex];
+
+      const engTitle = document.createElement("span");
+      engTitle.className = "month-name-eng";
+      engTitle.textContent = monthsEng[monthIndex];
+
+      header.appendChild(thaiTitle);
+      header.appendChild(engTitle);
+      card.appendChild(header);
+
+      const daysGrid = document.createElement("div");
+      daysGrid.className = "days-grid";
+
+      // 1. Render Weekday Headers (Sun-Sat)
+      daysThaiShort.forEach((day, index) => {
+        const dayHeader = document.createElement("div");
+        dayHeader.className = "weekday-header";
+        if (index === 0) dayHeader.classList.add("sun");
+        if (index === 6) dayHeader.classList.add("sat");
+        dayHeader.textContent = day;
+        daysGrid.appendChild(dayHeader);
+      });
+
+      // Calculate dates in month
+      const firstDay = new Date(year, monthIndex, 1).getDay(); // 0 = Sun, 6 = Sat
+      const totalDays = new Date(year, monthIndex + 1, 0).getDate();
+
+      // 2. Padding cells before 1st of month
+      for (let i = 0; i < firstDay; i++) {
+        const emptyCell = document.createElement("div");
+        emptyCell.className = "day-cell empty";
+        daysGrid.appendChild(emptyCell);
+      }
+
+      // 3. Render Days
+      const today = new Date();
+
+      for (let day = 1; day <= totalDays; day++) {
+        const dayCell = document.createElement("div");
+        dayCell.className = "day-cell";
+        dayCell.textContent = day;
+
+        // Map date attributes
+        const dayOfWeek = (firstDay + day - 1) % 7;
+        if (dayOfWeek === 0) dayCell.classList.add("sun");
+        if (dayOfWeek === 6) dayCell.classList.add("sat");
+
+        const monthStr = String(monthIndex + 1).padStart(2, '0');
+        const dayStr = String(day).padStart(2, '0');
+        const dateKeyShort = `${monthStr}-${dayStr}`;
+        const dateKeyFull = `${year}-${monthStr}-${dayStr}`;
+
+        // Check for holiday
+        const holiday = holidayData[dateKeyShort];
+        if (holiday) {
+          dayCell.classList.add(holiday.type); // 'public' or 'festival'
+          dayCell.title = holiday.title;
+        }
+
+        // Check if today
+        if (today.getFullYear() === year && today.getMonth() === monthIndex && today.getDate() === day) {
+          dayCell.classList.add("today");
+        }
+
+        // Add event dot container
+        const dotsContainer = document.createElement("div");
+        dotsContainer.className = "event-dots";
+        dotsContainer.id = `dots-${dateKeyFull}`;
+        dayCell.appendChild(dotsContainer);
+
+        // Click handler to open details
+        dayCell.addEventListener("click", () => openDrawer(year, monthIndex, day, dayOfWeek, holiday));
+
+        daysGrid.appendChild(dayCell);
+      }
+
+      card.appendChild(daysGrid);
+      return card;
+    }
+
+    // RENDER DOTS ON DAYS WITH SAVED EVENTS
+    function updateEventMarkers() {
+      // Clear existing dots
+      document.querySelectorAll(".event-dots").forEach(el => el.innerHTML = "");
+
+      // Repopulate dots
+      Object.keys(events).forEach(dateKey => {
+        const dotsContainer = document.getElementById(`dots-${dateKey}`);
+        if (dotsContainer && events[dateKey].length > 0) {
+          // Max 3 dots to prevent clutter
+          const visibleEvents = events[dateKey].slice(0, 3);
+          visibleEvents.forEach(evt => {
+            const dot = document.createElement("span");
+            dot.className = `event-dot dot-${evt.type || 'work'}`;
+            dotsContainer.appendChild(dot);
+          });
+        }
+      });
+    }
+
+    // UPDATE SIDEBAR HOLIDAYS LIST
+    function updateSidebarHolidays() {
+      sidebarHolidays.innerHTML = "";
+
+      let holidayCount = 0;
+
+      // Iterate and find all holidays matching current year representation
+      Object.keys(holidayData).sort().forEach(key => {
+        const [m, d] = key.split("-");
+        const holiday = holidayData[key];
+        const monthNum = parseInt(m) - 1;
+        const dayNum = parseInt(d);
+
+        // Create date object
+        const holidayDate = new Date(currentYearCE, monthNum, dayNum);
+        const dayName = daysThaiLong[holidayDate.getDay()];
+
+        const item = document.createElement("div");
+        item.className = `holiday-item ${holiday.type}`;
+
+        const dateText = `${dayNum} ${monthsThai[monthNum]}`;
+
+        item.innerHTML = `
+          <div class="holiday-date">${dateText}</div>
+          <div class="holiday-name" title="${holiday.title}">${holiday.title}</div>
+        `;
+
+        // Click on sidebar holiday centers calendar on that month card and highlights it
+        item.addEventListener("click", () => {
+          const monthCard = document.getElementById(`month-card-${monthNum}`);
+          if (monthCard) {
+            monthCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Temporary glow animation
+            monthCard.style.borderColor = "var(--holiday-color)";
+            monthCard.style.boxShadow = "0 0 25px var(--holiday-bg)";
+            setTimeout(() => {
+              monthCard.style.borderColor = "";
+              monthCard.style.boxShadow = "";
+            }, 1500);
+
+            // Open that day details
+            openDrawer(currentYearCE, monthNum, dayNum, holidayDate.getDay(), holiday);
+          }
+        });
+
+        sidebarHolidays.appendChild(item);
+        if (holiday.type === 'public') holidayCount++;
+      });
+
+      statHolidays.textContent = holidayCount;
+    }
+
+    // UPDATE STATS CARD COUNTERS
+    function updateStats() {
+      let eventCount = 0;
+      Object.keys(events).forEach(k => {
+        eventCount += events[k].length;
+      });
+      statEvents.textContent = eventCount;
+    }
+
+    // FILTER HOLIDAYS AND SHOW ONLY RELEVANT CARDS
+    function filterCalendarAndSidebar(query) {
+      if (!query) {
+        // Reset everything
+        document.querySelectorAll(".month-card").forEach(el => el.style.opacity = "1");
+        updateSidebarHolidays();
+        return;
+      }
+
+      query = query.toLowerCase();
+
+      // Filter sidebar items
+      document.querySelectorAll(".holiday-item").forEach(item => {
+        const name = item.querySelector(".holiday-name").textContent.toLowerCase();
+        const date = item.querySelector(".holiday-date").textContent.toLowerCase();
+        if (name.includes(query) || date.includes(query)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      });
+
+      // Filter calendar months
+      for (let m = 0; m < 12; m++) {
+        let hasMatch = false;
+        const monthNameThai = monthsThai[m].toLowerCase();
+        const monthNameEng = monthsEng[m].toLowerCase();
+
+        if (monthNameThai.includes(query) || monthNameEng.includes(query)) {
+          hasMatch = true;
+        }
+
+        // Check inside days of this month
+        const totalDays = new Date(currentYearCE, m + 1, 0).getDate();
+        for (let d = 1; d <= totalDays; d++) {
+          const monthStr = String(m + 1).padStart(2, '0');
+          const dayStr = String(d).padStart(2, '0');
+
+          // Check holiday title
+          const holiday = holidayData[`${monthStr}-${dayStr}`];
+          if (holiday && holiday.title.toLowerCase().includes(query)) {
+            hasMatch = true;
+          }
+
+          // Check user events
+          const dateKey = `${currentYearCE}-${monthStr}-${dayStr}`;
+          if (events[dateKey]) {
+            const hasUserEvt = events[dateKey].some(e => e.title.toLowerCase().includes(query));
+            if (hasUserEvt) hasMatch = true;
+          }
+        }
+
+        const monthCard = document.getElementById(`month-card-${m}`);
+        if (monthCard) {
+          monthCard.style.opacity = hasMatch ? "1" : "0.2";
+        }
+      }
+    }
+
+    // OPEN DRAWER (SLIDING SIDEBAR) FOR SPECIFIC DAY
+    function openDrawer(year, monthIndex, dayNum, dayOfWeek, holiday) {
+      const monthStr = String(monthIndex + 1).padStart(2, '0');
+      const dayStr = String(dayNum).padStart(2, '0');
+      selectedDateStr = `${year}-${monthStr}-${dayStr}`;
+
+      const yearBE = year + 543;
+
+      // Update date UI text
+      cardDateNum.textContent = dayNum;
+      cardDateThai.textContent = `${daysThaiLong[dayOfWeek]}ที่ ${dayNum} ${monthsThai[monthIndex]} พ.ศ. ${yearBE}`;
+      cardDateEng.textContent = `${daysEngLong[dayOfWeek]}, ${monthsEng[monthIndex]} ${dayNum}, ${year}`;
+
+      // Update holiday information
+      drawerHolidayInfo.innerHTML = "";
+      if (holiday) {
+        const badge = document.createElement("div");
+        badge.className = `holiday-tag-large ${holiday.type}`;
+
+        let typeText = holiday.type === "public" ? "วันหยุดราชการ" : "วันสำคัญ / เทศกาล";
+
+        badge.innerHTML = `
+          <span style="font-weight:700;">[${typeText}]</span> ${holiday.title}
+        `;
+        drawerHolidayInfo.appendChild(badge);
+      }
+
+      // Load events list for this day
+      renderDrawerNotes();
+
+      // Reset form fields
+      eventTitleInput.value = "";
+      eventTimeInput.value = "";
+
+      // Open UI
+      drawer.classList.add("open");
+      drawerOverlay.classList.add("open");
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove("open");
+      drawerOverlay.classList.remove("open");
+    }
+
+    // RENDER EVENTS INSIDE SIDE PANEL
+    function renderDrawerNotes() {
+      drawerNotesList.innerHTML = "";
+      const dayEvents = events[selectedDateStr] || [];
+
+      if (dayEvents.length === 0) {
+        drawerNotesList.innerHTML = `
+          <div style="font-size: 0.85rem; color: var(--text-secondary); font-style: italic; text-align: center; padding: 1.5rem; background: rgba(255, 255, 255, 0.01); border: 1px dashed var(--panel-border); border-radius: 10px;">
+            ไม่มีกิจกรรมบันทึกไว้ในวันนี้
+          </div>
+        `;
+        return;
+      }
+
+      dayEvents.forEach((evt, idx) => {
+        const card = document.createElement("div");
+        card.className = "note-card";
+        card.style.borderLeftColor = getTagColorCode(evt.type);
+
+        const timeStr = evt.time ? `@ ${evt.time} น.` : "";
+        const tagLabel = getTagLabelThai(evt.type);
+
+        card.innerHTML = `
+          <div class="note-content-area">
+            <div class="note-title">${evt.title}</div>
+            <div class="note-meta">
+              <span class="note-tag" style="background-color: ${getTagColorCode(evt.type)}">${tagLabel}</span>
+              <span>${timeStr}</span>
+            </div>
+          </div>
+          <button class="delete-note-btn" title="ลบรายการนี้" onclick="deleteEvent('${selectedDateStr}', ${idx})">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+          </button>
+        `;
+        drawerNotesList.appendChild(card);
+      });
+    }
+
+    // MAP TAG TO COLORS
+    function getTagColorCode(type) {
+      switch (type) {
+        case "work": return "#8b5cf6";
+        case "personal": return "#3b82f6";
+        case "urgent": return "#ef4444";
+        case "health": return "#10b981";
+        default: return "#8b5cf6";
+      }
+    }
+
+    function getTagLabelThai(type) {
+      switch (type) {
+        case "work": return "งาน";
+        case "personal": return "ส่วนตัว";
+        case "urgent": return "เร่งด่วน";
+        case "health": return "สุขภาพ";
+        default: return "งาน";
+      }
+    }
+
+    // SAVE EVENT TO LOCALSTORAGE
+    function saveEvent() {
+      const title = eventTitleInput.value.trim();
+      const time = eventTimeInput.value;
+      const type = selectedColorTag;
+
+      if (!title) return;
+
+      if (!events[selectedDateStr]) {
+        events[selectedDateStr] = [];
+      }
+
+      events[selectedDateStr].push({ title, time, type });
+
+      // Sort events by time
+      events[selectedDateStr].sort((a, b) => {
+        if (!a.time) return 1;
+        if (!b.time) return -1;
+        return a.time.localeCompare(b.time);
+      });
+
+      localStorage.setItem("thai_calendar_events", JSON.stringify(events));
+
+      // Update UI
+      renderDrawerNotes();
+      updateEventMarkers();
+      updateStats();
+
+      // Flash feedback
+      eventTitleInput.value = "";
+      eventTimeInput.value = "";
+    }
+
+    // DELETE EVENT FROM LOCALSTORAGE
+    window.deleteEvent = function (dateKey, index) {
+      if (events[dateKey]) {
+        events[dateKey].splice(index, 1);
+        if (events[dateKey].length === 0) {
+          delete events[dateKey];
+        }
+        localStorage.setItem("thai_calendar_events", JSON.stringify(events));
+
+        renderDrawerNotes();
+        updateEventMarkers();
+        updateStats();
+      }
+    };
+
+    // RUN INITIALIZATION
+    window.onload = init;
+  </script>
+</body>
+
+</html>
